@@ -1,6 +1,6 @@
 package com.example.tradeoff;
 //administrator
-
+//stamm
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,6 +23,7 @@ Button home;
         Bundle extras = getIntent().getExtras();
         i.putExtra("email",extras.getString("email"));
         startActivity(i);
+        System.out.println("Check")
     }
 
     public void Change(View view) {
