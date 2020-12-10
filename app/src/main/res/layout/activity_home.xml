@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:background="#B1EA70"
+    tools:context=".Home">
+
+
+    <TextView
+        android:id="@+id/tradeoff"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:fontFamily="@font/damion"
+        android:text="TradeOff"
+        android:textAlignment="center"
+        android:textColor="#0BD54E"
+        android:textColorLink="#DD2C00"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        tools:ignore="MissingConstraints,RtlCompat"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <ScrollView
+        android:layout_width="325dp"
+        android:layout_height="561dp"
+        android:layout_marginBottom="32dp"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tradeoff"
+        app:layout_constraintVertical_bias="0.795">
+
+        <LinearLayout
+            android:id="@+id/listofMyPosts_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

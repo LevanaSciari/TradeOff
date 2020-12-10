@@ -1,9 +1,10 @@
 package com.example.tradeoff;
+//levana dayan
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,67 +15,68 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthEmailException;
 import com.google.firebase.auth.FirebaseAuthException;
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 
 
 public class MainActivity extends AppCompatActivity {
-    Dialog dialog;
-    EditText username;
-    EditText pass;
+
+    EditText email;
+    EditText password;
     FirebaseAuth auth;
-    int admin_user=0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        auth = FirebaseAuth.getInstance();
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toast.makeText(this, "Welcom to my applicition", Toast.LENGTH_SHORT).show();
-    }
 
-    public void Admin(View view) {
-        dialog = new Dialog(this);
-        dialog.setContentView(R.layout.login_user);
-        username= (EditText)dialog.findViewById(R.id.Username);
-        pass=(EditText)dialog.findViewById(R.id.Pass);
-        admin_user=-1;
-        dialog.show();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        auth = FirebaseAuth.getInstance();
+
+        email = (EditText) findViewById(R.id.Email);
+        password = (EditText) findViewById(R.id.Pass);
+
+
     }
 
     public void connect(View view) {
+        final ProgressDialog progressDialog = ProgressDialog.show(MainActivity.this, "Please wait...", "Processing...", true);
+        final String userEmail = email.getText().toString().trim();
+        String userPassword = password.getText().toString().trim();
+        if (userEmail.isEmpty() || userPassword.isEmpty()) {
+            progressDialog.dismiss();
+            Toast.makeText(MainActivity.this, "Email or Password empty", Toast.LENGTH_LONG).show();
+            return;
+        }
 
-        String un=username.getText().toString().trim();
-        String password=pass.getText().toString().trim();
-
-        System.out.println(un+password);
-        auth.signInWithEmailAndPassword(un,password).addOnCompleteListener(MainActivity.this,new OnCompleteListener<AuthResult>() {
+        auth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
+                progressDialog.dismiss();
                 if (task.isSuccessful()) {
-                    if(admin_user==1) {
-                        startActivity(new Intent(MainActivity.this, user.class));
-                        Toast.makeText(getApplicationContext(), "User", Toast.LENGTH_LONG).show();
-                    }else{
-                        startActivity(new Intent(MainActivity.this, Admin.class));
-                        Toast.makeText(getApplicationContext(), "Admin", Toast.LENGTH_LONG).show();
+                    //Administrator Id
+                    String administratorID = "lpkeeLdoLwR93NiNXyI7oJGUUHu1";
+                    //cheking if the user is administrator
+                    if (auth.getCurrentUser().getUid().equals(administratorID)) {
+                        Intent administratorIntent = new Intent(MainActivity.this, Administrator.class);
+                        administratorIntent.putExtra("email", email.getText().toString().trim());
+                        Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
+                        startActivity(administratorIntent);
+                        finish();
+
+
+                    } else {
+                        Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(MainActivity.this, Home.class);
+                        i.putExtra("email", email.getText().toString().trim());
+                        startActivity(i);
+                        finish();
                     }
-                }
-                else {
+                } else {
                     try {
                         throw task.getException();
-                    }
-                    catch (FirebaseAuthInvalidCredentialsException e) {
-                        Toast.makeText(getApplicationContext(), "Invalid Password", Toast.LENGTH_LONG).show();
-                    }
-                    catch (FirebaseAuthEmailException e){
-                        Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_LONG).show();
-                    }
-                    catch (FirebaseAuthException e){
-                        Toast.makeText(getApplicationContext(), "Invalid Credentials", Toast.LENGTH_LONG).show();
-                    }
-                    catch (Exception e) {
+                    } catch (FirebaseAuthException e) {
+                        Toast.makeText(getApplicationContext(), "Invalid Email or Password", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -84,16 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void User(View view) {
-        dialog = new Dialog(this);
-        dialog.setContentView(R.layout.login_user);
-        username= (EditText)dialog.findViewById(R.id.Username);
-        pass=(EditText)dialog.findViewById(R.id.Pass);
-        admin_user=1;
-        dialog.show();
+
+    public void Forgot(View view) {
+        startActivity(new Intent(this, Forgot_Password.class));
     }
 
-    public void create(View view) {
-        startActivity(new Intent(this, create.class));
+    public void NotAccount(View view) {
+        startActivity(new Intent(this, RegisterUser.class));
     }
 }

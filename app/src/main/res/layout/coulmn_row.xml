@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@drawable/ooo"
+
+
+
+
+    card_view:cardBackgroundColor="#B1EA70"
+    card_view:cardCornerRadius="4dp"
+    card_view:contentPaddingBottom="32dp"
+    card_view:contentPaddingLeft="32dp"
+    card_view:contentPaddingRight="32dp"
+    card_view:contentPaddingTop="32dp">
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/Fname_card"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:gravity="center_horizontal"
+            android:rotationX="-7"
+            android:text="TextView"
+            android:textColor="#151515"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mail_card"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_gravity="left"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textColor="#151515"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/adress_card"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_gravity="left"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textColor="#151515"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/take_card"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center_horizontal"
+            android:text="TextView"
+            android:textColor="#151515"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/give_card"
+            android:layout_width="200dp"
+            android:layout_height="32dp"
+            android:layout_gravity="clip_vertical|left"
+            android:gravity="center_horizontal"
+            android:scrollbarSize="4dp"
+            android:text="TextView"
+            android:textColor="#151515"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/image_card"
+        android:layout_width="60dp"
+        android:layout_height="141dp"
+        android:layout_gravity="left"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/phone_card"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center|right"
+        card_view:srcCompat="@drawable/ic_baseline_local_phone_24"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</androidx.cardview.widget.CardView>
