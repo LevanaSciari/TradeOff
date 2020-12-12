@@ -3,6 +3,7 @@ package com.example.tradeoff;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 // Import the required libraries
@@ -39,12 +40,14 @@ public class DiagramRegion
     TextView rg1, rg2, rg3, rg4;
     Button next;
     PieChart pieChart;
-
+    String  userCurrentEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagram_region);
+        Bundle extras = getIntent().getExtras();
+        userCurrentEmail = extras.getString("email");
         //init data base
         databaseReference = FirebaseDatabase.getInstance().getReference();
         // Link those objects with their
@@ -181,6 +184,14 @@ public class DiagramRegion
         });
 
 
+
+    }
+    public void back(View view) {
+        Intent i = new Intent(DiagramRegion.this, Administrator.class);
+
+
+        i.putExtra("email", userCurrentEmail);
+        startActivity(i);
 
     }
 }

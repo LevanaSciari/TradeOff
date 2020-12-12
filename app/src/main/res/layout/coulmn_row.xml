@@ -31,18 +31,16 @@
         <TextView
             android:id="@+id/Fname_card"
             android:layout_width="200dp"
-            android:layout_height="44dp"
+            android:layout_height="32dp"
             android:gravity="center_horizontal"
-            android:rotationX="-7"
             android:text="TextView"
             android:textColor="#151515"
-            android:textSize="16sp" />
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/mail_card"
             android:layout_width="200dp"
             android:layout_height="32dp"
-            android:layout_gravity="left"
             android:gravity="center_horizontal"
             android:text="TextView"
             android:textColor="#151515"
@@ -52,7 +50,6 @@
             android:id="@+id/adress_card"
             android:layout_width="200dp"
             android:layout_height="32dp"
-            android:layout_gravity="left"
             android:gravity="center_horizontal"
             android:text="TextView"
             android:textColor="#151515"
@@ -61,8 +58,7 @@
         <TextView
             android:id="@+id/take_card"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_height="32dp"
             android:gravity="center_horizontal"
             android:text="TextView"
             android:textColor="#151515"
@@ -72,13 +68,11 @@
             android:id="@+id/give_card"
             android:layout_width="200dp"
             android:layout_height="32dp"
-            android:layout_gravity="clip_vertical|left"
             android:gravity="center_horizontal"
             android:scrollbarSize="4dp"
             android:text="TextView"
             android:textColor="#151515"
             android:textSize="16dp" />
-
 
     </LinearLayout>
 
@@ -86,8 +80,8 @@
     <ImageView
         android:id="@+id/image_card"
         android:layout_width="60dp"
-        android:layout_height="141dp"
-        android:layout_gravity="left"
+        android:layout_height="160dp"
+        android:layout_gravity="center|left"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView

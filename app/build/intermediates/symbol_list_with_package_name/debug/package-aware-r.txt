@@ -1673,6 +1673,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_passeword
 drawable image_login
 drawable intero
+drawable login_green
 drawable logo2
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1788,7 +1789,6 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
-id act
 id act1
 id act2
 id act3

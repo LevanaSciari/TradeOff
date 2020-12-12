@@ -152,7 +152,7 @@ public class Profile extends AppCompatActivity {
 
 
 //    public void Remove_post(View view) {
-//        Intent act = new Intent(new Intent(Profile.this, MyPost.class));
+//        Intent act = new In   tent(new Intent(Profile.this, MyPost.class));
 //        act.putExtra("email", email_);
 //        startActivity(act);// Write was successful!
 //

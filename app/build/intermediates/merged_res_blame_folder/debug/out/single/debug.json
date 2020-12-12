@@ -8,16 +8,20 @@
         "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\drawable\\puzzle.jpg"
     },
     {
+        "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login_green.png.flat",
+        "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\drawable\\login_green.png"
+    },
+    {
         "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_exit_to_app_24.png.flat",
-        "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_exit_to_app_24.png"
-    },
-    {
         "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_image_login.jpg.flat",
         "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\drawable-v24\\image_login.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_exit_to_app_24.png.flat",
+        "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_exit_to_app_24.png"
     },
     {
         "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_exit_to_app_24.png.flat",
@@ -76,12 +80,12 @@
         "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\drawable\\orange1.xml"
     },
     {
-        "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_diagram_region.xml.flat",
-        "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\layout\\activity_diagram_region.xml"
-    },
-    {
         "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_passeword.png.flat",
         "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_passeword.png"
+    },
+    {
+        "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_diagram_region.xml.flat",
+        "source": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\src\\main\\res\\layout\\activity_diagram_region.xml"
     },
     {
         "merged": "C:\\Users\\Levana\\Documents\\github\\TradeOff\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_account_circle_black_24dp.png.flat",

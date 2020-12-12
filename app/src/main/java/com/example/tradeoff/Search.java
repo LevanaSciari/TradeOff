@@ -50,11 +50,14 @@ public class Search extends AppCompatActivity implements AdapterView.OnItemSelec
     ArrayList<Post> postArrayList =new ArrayList<Post>();
     Post postValues;
     User user;
+    String userCurrentEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
+        Bundle extras = getIntent().getExtras();
+         userCurrentEmail = extras.getString("email");
+        System.out.println(userCurrentEmail+"tesssss");
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
 //**********************spinner*************************
@@ -170,11 +173,11 @@ public class Search extends AppCompatActivity implements AdapterView.OnItemSelec
                                     TextView give = view.findViewById(R.id.give_card);
                                     TextView take = view.findViewById(R.id.take_card);
 
-                                    firstName.setText(user.getFirstName());
-                                    mail.setText(user.getEmail());
-                                    region.setText(user.getRegion());
-                                    give.setText(post.getGive());
-                                    take.setText(post.getTake());
+                                    firstName.setText("Name: " + user.getFirstName());
+                                    mail.setText(  user.getEmail());
+                                    region.setText("Region: " + user.getRegion());
+                                    give.setText("Give: " + post.getGive());
+                                    take.setText("Take: " + post.getTake());
 
 
                                     //Phone
@@ -227,5 +230,14 @@ public class Search extends AppCompatActivity implements AdapterView.OnItemSelec
                 System.out.println("The read failed: " + databaseError.getCode());
             }
         });
+    }
+    public void back(View view) {
+        Intent i = new Intent(Search.this, Home.class);
+
+
+        i.putExtra("email", userCurrentEmail);
+        startActivity(i);
+
+
     }
 }

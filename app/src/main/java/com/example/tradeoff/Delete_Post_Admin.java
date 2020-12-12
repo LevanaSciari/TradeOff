@@ -1,6 +1,6 @@
 package com.example.tradeoff;
 
-
+//delete
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,12 +38,15 @@ public class Delete_Post_Admin extends AppCompatActivity {
 
     Post postName;
     User user;
+    String userCurrentEmail;
     DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete__admin);
+        Bundle extras = getIntent().getExtras();
+        userCurrentEmail = extras.getString("email");
         linearLayout = (LinearLayout) findViewById(R.id.listofAllPosts);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         printUserPosts();
@@ -85,13 +88,13 @@ public class Delete_Post_Admin extends AppCompatActivity {
                                     TextView region = view.findViewById(R.id.adress_card);
                                     TextView give = view.findViewById(R.id.give_card);
                                     TextView take = view.findViewById(R.id.take_card);
-                                    firstName.setText(user.getFirstName());
-                                    keyPost.setText(Integer.toString(count));
+                                    firstName.setText("Name: "+user.getFirstName());
+                                    keyPost.setText("Number of Post:"+ Integer.toString(count));
                                     myPosts.add(count, post);
                                     count++;
-                                    region.setText(user.getRegion());
-                                    give.setText(post.getGive());
-                                    take.setText(post.getTake());
+                                region.setText("Region: " + user.getRegion());
+                                give.setText("Give: " + post.getGive());
+                                take.setText("Take: " + post.getTake());
 
 
                                     //button to phone
@@ -176,5 +179,13 @@ public class Delete_Post_Admin extends AppCompatActivity {
         i.putExtra("email", extras.getString("email"));
         startActivity(i);
 
+    }
+
+
+    public void back(View view) {
+        Intent i = new Intent(this, Administrator.class);
+        Bundle extras = getIntent().getExtras();
+        i.putExtra("email", extras.getString("email"));
+        startActivity(i);
     }
 }

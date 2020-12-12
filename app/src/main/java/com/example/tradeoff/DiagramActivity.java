@@ -3,6 +3,7 @@ package com.example.tradeoff;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 // Import the required libraries
@@ -39,12 +40,15 @@ public class DiagramActivity extends AppCompatActivity {
     Button next;
     PieChart pieChart;
 
-
+String  userCurrentEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagram_activity);
+        Bundle extras = getIntent().getExtras();
+        userCurrentEmail = extras.getString("email");
         //init data base
         databaseReference = FirebaseDatabase.getInstance().getReference();
         // Link those objects with their
@@ -183,6 +187,14 @@ public class DiagramActivity extends AppCompatActivity {
         });
 
 
+
+    }
+    public void back(View view) {
+        Intent i = new Intent(DiagramActivity.this, Administrator.class);
+
+
+        i.putExtra("email", userCurrentEmail);
+        startActivity(i);
 
     }
 }

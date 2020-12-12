@@ -84,14 +84,14 @@ public class MyPost extends AppCompatActivity {
                                     TextView region = view.findViewById(R.id.adress_card);
                                     TextView give = view.findViewById(R.id.give_card);
                                     TextView take = view.findViewById(R.id.take_card);
-                                    firstName.setText(user.getFirstName());
-                                    keyPost.setText(Integer.toString(count));
+
+                                    firstName.setText("Name: " + user.getFirstName());
+                                    keyPost.setText("Number of post: " + Integer.toString(count));
                                     myPosts.add(count, post);
                                     count++;
-                                    region.setText(user.getRegion());
-                                    give.setText(post.getGive());
-                                    take.setText(post.getTake());
-
+                                    region.setText("Region: " + user.getRegion());
+                                    give.setText("Give: " + post.getGive());
+                                    take.setText("Take: " + post.getTake());
 
                                     //button to phone
                                     final Uri uri = Uri.fromParts("tel", user.getPhone(), null);

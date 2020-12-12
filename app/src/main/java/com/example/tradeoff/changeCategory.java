@@ -1,6 +1,7 @@
 package com.example.tradeoff;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -22,11 +23,14 @@ public class changeCategory extends AppCompatActivity {
     private EditText AddRegion;
     private EditText AddActivity;
     private EditText DeleteActivity;
+    String userCurrentEmail;
     private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_category);
+        Bundle extras = getIntent().getExtras();
+        userCurrentEmail = extras.getString("email");
         AddRegion = (EditText) findViewById(R.id.add_region);
         AddActivity = (EditText) findViewById(R.id.add_activity);
         DeleteActivity=(EditText) findViewById(R.id.delete_activity);
@@ -134,5 +138,12 @@ public class changeCategory extends AppCompatActivity {
         });
     }
 
+    public void back(View view) {
+        Intent i = new Intent(changeCategory.this, Administrator.class);
 
+
+        i.putExtra("email", userCurrentEmail);
+        startActivity(i);
+
+    }
 }

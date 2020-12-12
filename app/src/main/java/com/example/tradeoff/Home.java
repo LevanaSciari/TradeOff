@@ -74,7 +74,10 @@ public class Home extends AppCompatActivity {
                 startActivity(tent);
                 return true;
             case R.id.search:
-                startActivity(new Intent(this, Search.class));
+                Intent s = new Intent(this, Search.class);
+                Bundle search = getIntent().getExtras();
+                s.putExtra("email", search.getString("email"));
+                startActivity(s);
                 return true;
             case R.id.newpost:
                 Intent forgot = new Intent(Home.this, CreatePost.class);
@@ -84,7 +87,7 @@ public class Home extends AppCompatActivity {
                 finish();
                 return true;
             case R.id.exit:
-                String currentUserID = "j9LqMDzwjZM1KAfJ4lJNHCfsmcG3";
+                String currentUserID = "lpkeeLdoLwR93NiNXyI7oJGUUHu1";
                 if (auth.getCurrentUser().getUid().equals(currentUserID)) {
                     Intent Exit = new Intent(Home.this, Administrator.class);
                     Bundle extra_exit = getIntent().getExtras();
@@ -164,12 +167,11 @@ public class Home extends AppCompatActivity {
                                 TextView give = view.findViewById(R.id.give_card);
                                 TextView take = view.findViewById(R.id.take_card);
 
-                                firstName.setText("name: "+user.getFirstName());
-                                mail.setText(user.getEmail());
-                                region.setText(user.getRegion());
-                                give.setText(post.getGive());
-                                take.setText(post.getTake());
-
+                                firstName.setText("Name: " + user.getFirstName());
+                                mail.setText( user.getEmail());
+                                region.setText("Region: " + user.getRegion());
+                                give.setText("Give: " + post.getGive());
+                                take.setText("Take: " + post.getTake());
                                 //Phone
                                 final Uri uri = Uri.fromParts("tel", user.getPhone(), null);
                                 phone.setOnClickListener(new View.OnClickListener() {
