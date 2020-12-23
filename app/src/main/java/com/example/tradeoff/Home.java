@@ -3,7 +3,11 @@ package com.example.tradeoff;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 
@@ -14,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -104,39 +109,6 @@ public class Home extends AppCompatActivity {
         }
     }
 
-//    public void CreatePost(View view) {
-//        Intent forgot = new Intent(Home.this, CreatePost.class);
-//        Bundle extras = getIntent().getExtras();
-//        forgot.putExtra("email", extras.getString("email"));
-//        startActivity(forgot);
-//        finish();
-//    }
-//
-//    public void Exit(View view) {
-//        String currentUserID = "rMAV7MmwJbbWP0SoVdix7N8VuPF2";
-//        if (auth.getCurrentUser().getUid().equals(currentUserID)) {
-//            Intent Exit = new Intent(Home.this, Administrator.class);
-//            Bundle extras = getIntent().getExtras();
-//            Exit.putExtra("email", extras.getString("email"));
-//            startActivity(Exit);
-//            finish();
-//        } else {
-//            Intent Exit = new Intent(Home.this, MainActivity.class);
-//            startActivity(Exit);
-//            finish();
-//        }
-//    }
-//
-//    public void profile(View view) {
-//        Intent tent = new Intent(this, Profile.class);
-//        Bundle extras = getIntent().getExtras();
-//        tent.putExtra("email", extras.getString("email"));
-//        startActivity(tent);
-//    }
-//
-//    public void Search(View view) {
-//        startActivity(new Intent(this, Search.class));
-//    }
 
     public void getData() {
         linearLayout.removeAllViews();
@@ -166,6 +138,7 @@ public class Home extends AppCompatActivity {
                                 TextView region = view.findViewById(R.id.adress_card);
                                 TextView give = view.findViewById(R.id.give_card);
                                 TextView take = view.findViewById(R.id.take_card);
+                                Button like = view.findViewById(R.id.like);
 
                                 firstName.setText("Name: " + user.getFirstName());
                                 mail.setText( user.getEmail());
@@ -181,6 +154,30 @@ public class Home extends AppCompatActivity {
                                     }
                                 });
 
+
+                                Bundle extra_exit = getIntent().getExtras();
+
+                                String temp=extra_exit.getString("email");
+                                String temp2="";
+                                for(int i = 0 ; i <temp.length() ; i++){
+                                    if(temp.charAt(i)=='.'){
+                                        temp2+='_';
+                                    }else{
+                                        temp2+=temp.charAt(i);
+                                    }
+                                }
+                                final String my_mail_final =temp2;
+
+                                final String mail_final =user.getEmail();
+                                final String take_final =post.getTake();
+                                final String give_final =post.getGive();
+                                //like
+                                like.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        databaseReference.child("Like").child(mail_final).child(my_mail_final).setValue(take_final+" "+give_final);
+                                    }
+                                });
                                 //image
                                 StorageReference storageReference = FirebaseStorage.getInstance().getReference();
                                 final StorageReference imgRef = storageReference.child("images/").child("User/" + user.getEmail());
@@ -219,5 +216,8 @@ public class Home extends AppCompatActivity {
             }
         });
     }
+
+
+
 }
 

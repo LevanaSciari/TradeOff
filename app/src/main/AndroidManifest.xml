@@ -29,6 +29,15 @@
         <activity android:name=".Forgot_Password" />
         <activity android:name=".RegisterUser" />
         <activity android:name=".Administrator" />
+        <service
+            android:name=".notification"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="your.app.domain.NotificationService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

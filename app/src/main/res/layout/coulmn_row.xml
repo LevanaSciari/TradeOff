@@ -92,5 +92,12 @@
         card_view:srcCompat="@drawable/ic_baseline_local_phone_24"
         tools:ignore="VectorDrawableCompat" />
 
+    <Button
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="like" />
+
 
 </androidx.cardview.widget.CardView>

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -35,7 +36,7 @@ public class Delete_Post_Admin extends AppCompatActivity {
     ArrayList<Post> allPosts = new ArrayList<Post>();
 
     ArrayList<Post> myPosts = new ArrayList<Post>();
-
+    private ImageButton returnButon;
     Post postName;
     User user;
     String userCurrentEmail;
@@ -47,10 +48,20 @@ public class Delete_Post_Admin extends AppCompatActivity {
         setContentView(R.layout.activity_delete__admin);
         Bundle extras = getIntent().getExtras();
         userCurrentEmail = extras.getString("email");
+        returnButon = findViewById(R.id.cancelBtn);
         linearLayout = (LinearLayout) findViewById(R.id.listofAllPosts);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         printUserPosts();
-
+        returnButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Delete_Post_Admin.this, Administrator.class);
+                Bundle extras = getIntent().getExtras();
+                i.putExtra("email", extras.getString("email"));
+                startActivity(i);
+                finish();
+            }
+        });
     }
 
     int count = 0;

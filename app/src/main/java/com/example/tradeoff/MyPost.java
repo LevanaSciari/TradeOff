@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class MyPost extends AppCompatActivity {
     ArrayList<Post> allPosts = new ArrayList<Post>();
 
     ArrayList<Post> myPosts = new ArrayList<Post>();
-
+    private ImageButton returnButon;
     Post postName;
     User user;
     DatabaseReference databaseReference;
@@ -44,8 +45,19 @@ public class MyPost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_post);
         linearLayout = (LinearLayout) findViewById(R.id.myposts);
+        returnButon = findViewById(R.id.cancelBtn);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         printUserPosts();
+        returnButon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyPost.this, Profile.class);
+                Bundle extras = getIntent().getExtras();
+                i.putExtra("email", extras.getString("email"));
+                startActivity(i);
+                finish();
+            }
+        });
 
     }
 

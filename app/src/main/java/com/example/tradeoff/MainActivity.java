@@ -54,12 +54,17 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.dismiss();
                 if (task.isSuccessful()) {
                     //Administrator Id
-                    String administratorID = "lpkeeLdoLwR93NiNXyI7oJGUUHu1";
+                    String administratorID = "MgrQ31pWTHbCt1vL5ypS7SwwoXO2";
                     //cheking if the user is administrator
                     if (auth.getCurrentUser().getUid().equals(administratorID)) {
                         Intent administratorIntent = new Intent(MainActivity.this, Administrator.class);
                         administratorIntent.putExtra("email", email.getText().toString().trim());
-                        Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "Welcome to TradeOff", Toast.LENGTH_LONG).show();
+
+                        Intent service = new Intent(MainActivity.this, notification.class);
+                        service.putExtra("email", email.getText().toString().trim());
+                        startService(service);
+
                         startActivity(administratorIntent);
                         finish();
 
@@ -68,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(MainActivity.this, Home.class);
                         i.putExtra("email", email.getText().toString().trim());
+
+                        Intent service = new Intent(MainActivity.this, notification.class);
+                        service.putExtra("email", email.getText().toString().trim());
+                        startService(service);
+
                         startActivity(i);
                         finish();
                     }

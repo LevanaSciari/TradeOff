@@ -56,4 +56,10 @@ String currentEmail;
         i.putExtra("email",currentEmail);
         startActivity(i);
     }
+
+    public void back(View view) {
+        Intent i = new Intent(Administrator.this, MainActivity.class);
+
+        startActivity(i);
+    }
 }

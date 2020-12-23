@@ -1657,6 +1657,7 @@ drawable googleg_standard_color_18
 drawable ic_account_circle_black_24dp
 drawable ic_baseline_delete_24
 drawable ic_baseline_exit_to_app_24
+drawable ic_baseline_favorite_border_24
 drawable ic_baseline_image_search_24
 drawable ic_baseline_local_phone_24
 drawable ic_baseline_photo_camera_24
@@ -1852,6 +1853,7 @@ id btn_save_profile_changes
 id button
 id button2
 id button3
+id button4
 id buttonPanel
 id cache_measures
 id cancelBtn
@@ -1979,6 +1981,7 @@ id largeLabel
 id layout
 id left
 id light
+id like
 id line1
 id line3
 id linear
@@ -2092,7 +2095,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
 id scrollable
 id search
 id search_badge

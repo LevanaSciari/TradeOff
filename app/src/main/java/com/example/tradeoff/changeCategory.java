@@ -61,6 +61,7 @@ public class changeCategory extends AppCompatActivity {
                     String getFDB = statis.getValue(String.class);
                     if (getFDB.equals(s)) {
                         statis.getRef().removeValue();
+                        Toast.makeText(changeCategory.this, "Delete Activity successful", Toast.LENGTH_LONG).show();
                     }
                 }
             }
