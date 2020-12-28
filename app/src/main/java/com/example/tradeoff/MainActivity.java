@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.dismiss();
                 if (task.isSuccessful()) {
                     //Administrator Id
-                    String administratorID = "MgrQ31pWTHbCt1vL5ypS7SwwoXO2";
+                    String administratorID = "9A9TvNlwCsNesULmMAUSQWQcgO62";
                     //cheking if the user is administrator
                     if (auth.getCurrentUser().getUid().equals(administratorID)) {
                         Intent administratorIntent = new Intent(MainActivity.this, Administrator.class);
@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent service = new Intent(MainActivity.this, notification.class);
                         service.putExtra("email", email.getText().toString().trim());
+                        service.putExtra("connection",false);
                         startService(service);
 
                         startActivity(administratorIntent);
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent service = new Intent(MainActivity.this, notification.class);
                         service.putExtra("email", email.getText().toString().trim());
+                        service.putExtra("connection",false);
                         startService(service);
 
                         startActivity(i);

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\0a5045bc66945a7765a6f0a1f5ff6c5e\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-ui:2.2.2] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\13c762a058e2ddbc0e27a395e695d83d\navigation-ui-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\f8aaae792a30a1f56b0d58cd10f75c0e\material-1.2.1\AndroidManifest.xml:17:1-24:12
@@ -68,20 +68,20 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Levana\.gradle\cach
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\0c72ad55ead990bd78e6f051ff702c07\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\a927cb788b300023746251a8b9416eb7\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\bc08a9b8e8d88a4a706f5b1d66b83db9\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:3:5-35
 		INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-50:12
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:2:11-69
@@ -114,7 +114,7 @@ ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:7:22-69
 application
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:9:5-48:19
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:9:5-49:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\0a5045bc66945a7765a6f0a1f5ff6c5e\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\0a5045bc66945a7765a6f0a1f5ff6c5e\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\f8aaae792a30a1f56b0d58cd10f75c0e\material-1.2.1\AndroidManifest.xml:22:5-20
@@ -236,35 +236,35 @@ ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:31:19-48
 service#com.example.tradeoff.notification
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:32:9-40:19
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:33:9-41:19
 	android:label
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:34:13-45
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:35:13-45
 	android:name
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:34:13-41
 intent-filter#action:name:your.app.domain.NotificationService+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:35:13-39:29
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:36:13-40:29
 action#your.app.domain.NotificationService
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:36:17-78
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:37:17-78
 	android:name
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:36:25-75
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:37:25-75
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:17-76
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:17-76
 	android:name
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:27-73
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:27-73
 activity#com.example.tradeoff.MainActivity
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:41:9-47:20
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:42:9-48:20
 	android:name
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:41:19-47
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:42:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:42:13-46:29
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:43:17-69
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:43:25-66
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:45:17-77
+ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:45:27-74
+		ADDED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:46:27-74
 uses-sdk
 INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml

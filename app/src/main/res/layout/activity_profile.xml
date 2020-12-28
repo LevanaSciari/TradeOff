@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B1EA70"
+
+    android:background="@drawable/image_hmee"
     android:orientation="vertical"
     tools:context=".Profile">
 
@@ -32,8 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="First Name:"
-        android:textColor="#0BD54E"
-        android:textSize="22sp"
+        android:textColor="#083EE3"
+        android:textStyle="bold"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -52,7 +54,7 @@
         android:layout_marginBottom="10dp"
         android:text=""
         android:textColor="#151515"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -68,8 +70,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Last Name:"
-        android:textColor="#0BD54E"
-        android:textSize="22sp"
+        android:textColor="#083EE3"
+        android:textStyle="bold"
+        android:textSize="28sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -88,7 +91,7 @@
         android:layout_marginBottom="10dp"
         android:text=""
         android:textColor="#151515"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -104,8 +107,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Email:"
-        android:textColor="#0BD54E"
-        android:textSize="22sp"
+        android:textColor="#083EE3"
+        android:textStyle="bold"
+        android:textSize="28sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -124,7 +128,7 @@
         android:layout_marginBottom="10dp"
         android:text=""
         android:textColor="#151515"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -143,8 +147,9 @@
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
-        android:textColor="#0BD54E"
-        android:textSize="22sp"
+        android:textColor="#083EE3"
+        android:textStyle="bold"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -160,7 +165,7 @@
         android:layout_marginBottom="10dp"
         android:text=""
         android:textColor="#151515"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -175,8 +180,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Region:"
-        android:textColor="#0BD54E"
-        android:textSize="22sp"
+        android:textColor="#083EE3"
+        android:textStyle="bold"
+        android:textSize="28sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"
@@ -195,7 +201,7 @@
         android:layout_marginBottom="10dp"
         android:text=""
         android:textColor="#151515"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textAlignment="center"
 
         android:gravity="center_horizontal"

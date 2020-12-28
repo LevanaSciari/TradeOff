@@ -97,6 +97,9 @@ public class MyPost extends AppCompatActivity {
                                     TextView give = view.findViewById(R.id.give_card);
                                     TextView take = view.findViewById(R.id.take_card);
 
+                                    View button = view.findViewById(R.id.like);
+                                    button.setVisibility(View.GONE);
+
                                     firstName.setText("Name: " + user.getFirstName());
                                     keyPost.setText("Number of post: " + Integer.toString(count));
                                     myPosts.add(count, post);

@@ -138,7 +138,7 @@ public class Home extends AppCompatActivity {
                                 TextView region = view.findViewById(R.id.adress_card);
                                 TextView give = view.findViewById(R.id.give_card);
                                 TextView take = view.findViewById(R.id.take_card);
-                                Button like = view.findViewById(R.id.like);
+
 
                                 firstName.setText("Name: " + user.getFirstName());
                                 mail.setText( user.getEmail());
@@ -154,7 +154,7 @@ public class Home extends AppCompatActivity {
                                     }
                                 });
 
-
+                                Button like = view.findViewById(R.id.like);
                                 Bundle extra_exit = getIntent().getExtras();
 
                                 String temp=extra_exit.getString("email");
@@ -171,11 +171,12 @@ public class Home extends AppCompatActivity {
                                 final String mail_final =user.getEmail();
                                 final String take_final =post.getTake();
                                 final String give_final =post.getGive();
+                                final String postId = databaseReference.push().getKey();
                                 //like
                                 like.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        databaseReference.child("Like").child(mail_final).child(my_mail_final).setValue(take_final+" "+give_final);
+                                        databaseReference.child("Like").child(mail_final).child(my_mail_final).child(post.getKeyPost()).setValue("You have new notification");
                                     }
                                 });
                                 //image

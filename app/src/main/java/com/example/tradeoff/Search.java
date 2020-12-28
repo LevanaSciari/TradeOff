@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -186,6 +187,32 @@ public class Search extends AppCompatActivity implements AdapterView.OnItemSelec
                                         @Override
                                         public void onClick(View v) {
                                             startActivity(new Intent(Intent.ACTION_DIAL, uri));
+                                        }
+                                    });
+
+                                    //like button
+                                    Button like = view.findViewById(R.id.like);
+                                    Bundle extra_exit = getIntent().getExtras();
+
+                                    String temp=extra_exit.getString("email");
+                                    String temp2="";
+                                    for(int i = 0 ; i <temp.length() ; i++){
+                                        if(temp.charAt(i)=='.'){
+                                            temp2+='_';
+                                        }else{
+                                            temp2+=temp.charAt(i);
+                                        }
+                                    }
+                                    final String my_mail_final =temp2;
+
+                                    final String mail_final =user.getEmail();
+                                    final String take_final =post.getTake();
+                                    final String give_final =post.getGive();
+                                    //like
+                                    like.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            databaseReference.child("Like").child(mail_final).child(my_mail_final).setValue(take_final+" "+give_final);
                                         }
                                     });
 

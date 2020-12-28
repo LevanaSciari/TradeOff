@@ -33,7 +33,7 @@
 19-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e7088e93aa9e4ba3fcef4d8a3f9d1310\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:22-107
 20
 21    <application
-21-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:9:5-48:19
+21-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:9:5-49:19
 22        android:allowBackup="true"
 22-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:10:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -94,37 +94,37 @@
 46        <activity android:name="com.example.tradeoff.Administrator" />
 46-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:31:9-51
 46-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:31:19-48
-47
+47        <!-- notificatin service -->
 48        <service
-48-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:32:9-40:19
+48-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:33:9-41:19
 49            android:name="com.example.tradeoff.notification"
-49-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:33:13-41
+49-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:34:13-41
 50            android:label="@string/app_name" >
-50-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:34:13-45
+50-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:35:13-45
 51            <intent-filter>
-51-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:35:13-39:29
+51-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:36:13-40:29
 52                <action android:name="your.app.domain.NotificationService" />
-52-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:36:17-78
-52-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:36:25-75
+52-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:37:17-78
+52-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:37:25-75
 53
 54                <category android:name="android.intent.category.DEFAULT" />
-54-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:17-76
-54-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:27-73
+54-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:17-76
+54-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:27-73
 55            </intent-filter>
 56        </service>
 57
 58        <activity android:name="com.example.tradeoff.MainActivity" >
-58-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:41:9-47:20
-58-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:41:19-47
+58-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:42:9-48:20
+58-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:42:19-47
 59            <intent-filter>
-59-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:42:13-46:29
+59-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:43:13-47:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:43:17-69
-60-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:43:25-66
+60-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:44:17-69
+60-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:44:25-66
 61
 62                <category android:name="android.intent.category.LAUNCHER" />
-62-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:45:17-77
-62-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:45:27-74
+62-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:46:17-77
+62-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:46:27-74
 63            </intent-filter>
 64        </activity>
 65
@@ -201,8 +201,8 @@
 101-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:42:25-66
 102
 103                <category android:name="android.intent.category.DEFAULT" />
-103-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:17-76
-103-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:27-73
+103-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:17-76
+103-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:27-73
 104                <category android:name="android.intent.category.BROWSABLE" />
 104-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:45:17-78
 104-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:45:27-75
@@ -236,8 +236,8 @@
 119-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:42:25-66
 120
 121                <category android:name="android.intent.category.DEFAULT" />
-121-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:17-76
-121-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:27-73
+121-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:17-76
+121-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:27-73
 122                <category android:name="android.intent.category.BROWSABLE" />
 122-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:45:17-78
 122-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:45:27-75
@@ -268,8 +268,8 @@
 136-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Levana\.gradle\caches\transforms-2\files-2.1\e791d45682bb1f0c31ba54b2cccb0198\jetified-firebase-auth-20.0.0\AndroidManifest.xml:77:25-86
 137
 138                <category android:name="android.intent.category.DEFAULT" />
-138-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:17-76
-138-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:38:27-73
+138-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:17-76
+138-->C:\Users\Levana\Documents\github\TradeOff\app\src\main\AndroidManifest.xml:39:27-73
 139            </intent-filter>
 140        </service>
 141

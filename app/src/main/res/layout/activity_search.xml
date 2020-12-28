@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B1EA70"
+    android:background="@drawable/image_hmee"
+
     tools:context=".Search">
 
     <TextView
@@ -65,7 +66,7 @@
     <ScrollView
         android:layout_width="322dp"
         android:layout_height="521dp"
-        android:background="#B1EA70"
+        android:background="#DBD7EF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -84,7 +85,7 @@
         android:id="@+id/search_button"
         android:layout_width="95dp"
         android:layout_height="80dp"
-        android:background="#B1EA70"
+        android:background="@null"
         android:onClick="search_click"
         android:text="search"
         app:layout_constraintBottom_toBottomOf="parent"

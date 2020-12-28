@@ -41,6 +41,8 @@ public class notification extends Service{
         DatabaseReference database;
         String email="";
         String email_Point="";
+        boolean flag=true;
+        boolean connection=true;
         @Override
         public IBinder onBind(Intent arg0)
         {
@@ -50,7 +52,7 @@ public class notification extends Service{
         @Override
         public int onStartCommand(Intent intent, int flags, int startId)
         {
-            Log.e(TAG, "onStartCommand");
+           // Log.e(TAG, "onStartCommand");
             super.onStartCommand(intent, flags, startId);
 
             startTimer();
@@ -59,7 +61,7 @@ public class notification extends Service{
             Bundle extra_exit = intent.getExtras();
             email="";
             email_Point=extra_exit.getString("email");
-
+            connection = extra_exit.getBoolean("connection");
             for(int i = 0 ; i <email_Point.length() ; i++){
                 if(email_Point.charAt(i)=='.'){
                     email+='_';
@@ -67,8 +69,6 @@ public class notification extends Service{
                     email+=email_Point.charAt(i);
                 }
             }
-
-
             return START_STICKY;
         }
 
@@ -124,19 +124,25 @@ public class notification extends Service{
                         {
 
                             database = FirebaseDatabase.getInstance().getReference();
+
                             database.child("Like").child(email).addChildEventListener(new ChildEventListener()
                             {
                                 @Override
                                 public void onChildAdded(com.google.firebase.database.DataSnapshot dataSnapshot, String s)
                                 {
-                                  //  showNotification("Message",  "Or sent you a message.");
+                                    if(connection==false){ // first time
+                                        connection=true;
+                                    }else if(flag==true) { //first time after connectiion
+                                        showNotification(dataSnapshot.getKey() + " send you a Like", "" + dataSnapshot.getValue());
+                                        flag = false;
+                                    }
                                 }
 
                                 @Override
                                 public void onChildChanged(com.google.firebase.database.DataSnapshot dataSnapshot, String s)
                                 {
                                     System.out.println(dataSnapshot.getKey()+" "+ dataSnapshot.getValue());
-                                    showNotification(dataSnapshot.getKey() +" send you a Like",  ""+dataSnapshot.getValue());
+                                    showNotification(dataSnapshot.getKey() +" send you a Like",  "");
                                 }
 
                                 @Override
@@ -147,6 +153,7 @@ public class notification extends Service{
                                 @Override
                                 public void onChildMoved(com.google.firebase.database.DataSnapshot dataSnapshot, String s)
                                 {
+
                                 }
 
                                 @Override
@@ -181,6 +188,7 @@ public class notification extends Service{
         intent.putExtra("email",email_Point);
         PendingIntent pi = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentIntent(pi);
+        mBuilder.setOngoing(true);
         mNotificationManager.notify(0, mBuilder.build());
     }
 }

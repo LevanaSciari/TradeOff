@@ -7,12 +7,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="right"
-    android:background="@drawable/ooo"
+    android:background="@drawable/image_hmee"
 
 
 
+    card_view:cardBackgroundColor="#D7EFE0"
 
-    card_view:cardBackgroundColor="#B1EA70"
     card_view:cardCornerRadius="4dp"
     card_view:contentPaddingBottom="32dp"
     card_view:contentPaddingLeft="32dp"
